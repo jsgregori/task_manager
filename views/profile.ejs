@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('./partials/head') %>
+</head>
+
+<body>
+    <%- include('./partials/header') %>
+
+    <div class="profile d-flex">
+        <div class="align-self-stretch d-flex align-items-center">
+            <img src="/images/img_users/<%= avatar %>" alt="imagen de perfil" class="avatar mr-3">
+        </div>
+        
+        <div class="flex-grow-1">
+            <h2><%= firstname %></h2>
+            <h2><%= lastname %></h2>
+            <h3><%= email %></h3>
+            <h3>cuenta: <%= category %></h3 >
+            <a href="/users/profile/edit">Editar cuenta</a>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <%- include('./partials/head') %>
+    <script src="/javascripts/signin.js"></script>
+</head>
+
+<body>
+    <%- include('./partials/header') %>
+    <main>
+
+
+        <form action="/users/profile/edit?_method=PUT" method="POST" id="form" enctype="multipart/form-data">
+
+            <div class="headerform">
+                <div class="overlap">
+                    <label for="imgUser">
+                        <img src="/images/img_users/<%= avatar %>" alt="" class="previewimg" id="avatar">
+                    </label>
+                    <input type="file" name="imgUser" id="imgUser">
+                </div>
+            </div>
+
+            <div class="formulario">
+
+                <label for="firstname">Nombre</label>
+                <input type="text" name="firstname" id="firstname" required="required" class="form-control"
+                    value="<%= firstname %>">
+                <label for="lastname">Apellido</label>
+                <input type="text" name="lastname" id="lastname" required="required" class="form-control"
+                    value="<%= lastname %>">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" required="required" class="form-control" readonly
+                    value="<%= email %>">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" required="required" class="form-control">
+                <label for="confirmPassword">Repetir contraseña</label>
+                <input type="password" name="confirmPassword" id="confirmPassword" required="required"
+                    class="form-control">
+
+                <div class="d-flex justify-content-end align-items-center mt-3">
+                    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                </div>
+
+            </div>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

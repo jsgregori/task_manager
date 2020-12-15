@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <%- include('./partials/head') %>
+</head>
+
+<body>
+    <%- include('./partials/header') %>
+    <main>
+        <div>
+            <table>
+                <tr>
+                    <th>Sitio</th>
+                    <th>Tarea</th>
+                    <th>Proyecto</th>
+                    <th>Fecha de solicitud</th>
+                    <th>fecha de ejecución</th>
+                    <th>Responsable</th>
+                    <th>Estado</th>
+                </tr>
+                <% for(task of tasks){%>
+                <tr>
+                    <td><%= task.site %></td>
+                    <td><%= task.task %></td>
+                    <td><%= task.project %></td>
+                    <td><%= task.request_date %></td>
+                    <td><%= task.execution_date %></td>
+                    <td><%= task.user.last_name %></td>
+                    <td><%= task.status %></td>
+                </tr>
+                <% } %>
+            </table>
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

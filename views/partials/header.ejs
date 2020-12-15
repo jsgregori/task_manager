@@ -1,0 +1,22 @@
+<header class="d-flex justify-content-end">
+
+    <a href="/task">Tareas</a>
+    <a href="/users/logout">Cerrar sesión</a>
+    <div class="button">
+        
+        <% if(typeof avatar != 'undefined') { %>
+
+        <a href="/users/profile"><img src="/images/img_users/<%= avatar %>" alt="imagen de perfil" class="miniavatar"></a>
+
+        <% } else { %>
+
+        <a href="/users/profile"><img src="/images/img_users/generic_user.png" alt="imagen de perfil" class="miniavatar"></a>
+
+        <% } %>
+
+    </div>
+
+
+
+
+</header>
