@@ -1,22 +1,32 @@
 <header class="d-flex justify-content-end">
 
     <a href="/task">Tareas</a>
-    <a href="/users/logout">Cerrar sesión</a>
-    <div class="button">
-        
-        <% if(typeof avatar != 'undefined') { %>
 
-        <a href="/users/profile"><img src="/images/img_users/<%= avatar %>" alt="imagen de perfil" class="miniavatar"></a>
 
-        <% } else { %>
+    <% if(typeof avatar !='undefined' ) { %>
 
-        <a href="/users/profile"><img src="/images/img_users/generic_user.png" alt="imagen de perfil" class="miniavatar"></a>
+    <div class="dropdown">
 
-        <% } %>
+        <a class="button" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="/images/img_users/<%= avatar %>" alt="imagen de perfil" class="miniavatar">
+        </a>
+
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="/users/profile">Pefil</a></li>
+            <li><a class="dropdown-item" href="/users/profile/edit">Editar perfil</a></li>
+            <li><a class="dropdown-item" href="/users/logout">Cerrar sessión</a></li>
+        </ul>
 
     </div>
 
+    <% } else { %>
 
+    <div class="button">
+        <a href="/users/profile"><img src="/images/img_users/generic_user.png" alt="imagen de perfil"
+            class="miniavatar"></a>
+    </div>
+        
+    <% } %>
 
 
 </header>

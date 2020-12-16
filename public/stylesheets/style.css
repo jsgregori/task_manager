@@ -32,6 +32,7 @@ header {
 }
 
 .button {
+  display: block;
   height: 40px;
   width: 40px;
   text-align: center;
@@ -88,6 +89,7 @@ table {
 
 .formulario input {
   width: 100%;
+  margin-top: 7px;
   margin-bottom: 7px;
   font-size: 14px;
 }
@@ -198,6 +200,7 @@ table {
 
 .loginform input {
   width: 100%;
+  margin-top: 7px;
   margin-bottom: 7px;
   font-size: 14px;
 }
